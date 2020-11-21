@@ -4,7 +4,7 @@ module.exports = {
     author: {
       name: `Shaikh Mohammed Aqdas`,
       summary: `who lives and works in Mumbai building useful things.`,
-    },
+    },  
     description: `A Gatsby Test Blog`,
     siteUrl: `https://hopeful-austin-5b787f.netlify.app/`,
     social: {

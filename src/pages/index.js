@@ -44,6 +44,7 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
       <Bio />
+      
       <h1>Blogs </h1>
       <ol style={{ listStyle: `none` }}>
         {blogs.map(post => {
@@ -110,6 +111,7 @@ const BlogIndex = ({ data, location }) => {
           )
         })}
       </ol>
+      
     </Layout>
   )
 }
