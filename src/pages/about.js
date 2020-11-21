@@ -16,11 +16,13 @@ const about = ({ data, location }) => {
         }}
       >
         <h3>Hello Welcome to About</h3>
+        <hr />
         <p>
           This is the about page the content about the company can be shown
           here.
         </p>
         <h3>About Me</h3>
+        <hr />
         <p>
           <Bio />
         </p>

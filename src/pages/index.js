@@ -16,6 +16,7 @@ const BlogIndex = ({ data, location }) => {
       <Layout location={location} title={siteTitle}>
         <SEO title="All posts" />
         <Bio />
+        <hr />
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the
           directory you specified for the "gatsby-source-filesystem" plugin in
@@ -25,14 +26,14 @@ const BlogIndex = ({ data, location }) => {
     )
   } else {
     var i = 0
-    var c = 0 
+    var c = 0
     var b = 0
     for (var pk in posts) {
       var isBlog = posts[pk].fileAbsolutePath
-      if (isBlog.includes('blog')) {
+      if (isBlog.includes("blog")) {
         blogs[b] = posts[pk]
         b++
-      }else{
+      } else {
         clogs[c] = posts[pk]
         c++
       }
@@ -44,8 +45,9 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
       <Bio />
-      
+
       <h1>Blogs </h1>
+      <hr />
       <ol style={{ listStyle: `none` }}>
         {blogs.map(post => {
           const title = post.frontmatter.title || post.fields.slug
@@ -78,7 +80,8 @@ const BlogIndex = ({ data, location }) => {
           )
         })}
       </ol>
-      <h1>Clogs (setup for Test) </h1>
+      <hr /><hr /><h1>Clogs (setup for Testing) </h1>
+      <hr />
       <ol style={{ listStyle: `none` }}>
         {clogs.map(post => {
           const title = post.frontmatter.title || post.fields.slug
@@ -111,7 +114,6 @@ const BlogIndex = ({ data, location }) => {
           )
         })}
       </ol>
-      
     </Layout>
   )
 }
